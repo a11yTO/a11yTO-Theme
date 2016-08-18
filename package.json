@@ -1,0 +1,21 @@
+{
+  "name": "a11yto-grunt",
+  "version": "1.0.0",
+  "description": "Task runner for a11yTO-Theme",
+  "main": "index.php",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a11yTO/a11yTO-Theme.git"
+  },
+  "author": "a11yTO Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a11yTO/a11yTO-Theme/issues"
+  },
+  "homepage": "https://github.com/a11yTO/a11yTO-Theme#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
