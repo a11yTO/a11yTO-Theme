@@ -18,6 +18,8 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -25,20 +27,28 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'a11yto' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+		<div class="site-branding cf">
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Hashtag A Eleven Y T.O., Accessibility Toronto" rel="home">
+
+				<img class="inject-me logo" src="<?php echo get_template_directory_uri(); ?>/graphics/a11yto-logo.svg" alt="Logo: An illustration of a silhouette of the Toronto skyline centred in a blue and red border." aria-hidden="true" />
+
+				<?php
+				if ( is_front_page() && is_home() ) : ?>
+					<h1 class="site-title screen-reader-text" aria-hidden="true"><?php bloginfo( 'name' ); ?></h1>
+				<?php else : ?>
+					<p class="site-title screen-reader-text" aria-hidden="true"><?php bloginfo( 'name' ); ?></p>
+				<?php
+				endif;
+
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description" aria-hidden="true"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<?php
+				endif; ?>
+
+			</a>
+
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
