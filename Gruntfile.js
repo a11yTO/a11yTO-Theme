@@ -16,6 +16,14 @@ module.exports = function(grunt) {
 			}
 		},
 
+		uglify: {
+			target: {
+				files: {
+					'js/build/global.min.js': ['js/src/customizer.js', 'js/src/navigation.js', 'js/src/skip-link-focus-fix.js']
+				}
+			}
+		},
+
 		watch: {
 			css: {
 				files: ['sass/*.scss', 'sass/**/*.scss'],
@@ -28,6 +36,7 @@ module.exports = function(grunt) {
   // Load the plugins.
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task(s).
   grunt.registerTask('default', ['watch']);
