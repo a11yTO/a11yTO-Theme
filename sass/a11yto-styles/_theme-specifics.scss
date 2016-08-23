@@ -1,4 +1,8 @@
 /*
+ * This stlesheet serves as one place where all a11yTO-Theme specific styles will reside, making it easier to manage now and in the future. Or that's the hope.
+ */
+
+/*
  * 1. I used the universal selector (*) and a generic "a" selector prior to the focus pseudo-element to insure the styles I declared below are applied to anything that receives focus, and in a consistant manner.
  * 2. Use of !important's ensure conflicts are overridden by FOCUS' styles.
  */
@@ -12,35 +16,8 @@ a:focus img {
 	display: inline-block !important; /* to ensure the outline wraps an entire linked image. */
 }
 
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf {
-    *zoom: 1;
-}
-
 .site-branding {
-	margin: 6px 5%;
+	padding: 6px 5%;
 }
 .logo {
 	float: left;

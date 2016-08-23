@@ -27,7 +27,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'a11yto' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding cf">
+		<div class="site-branding clear">
 
 				<img class="inject-me logo" src="<?php echo get_template_directory_uri(); ?>/graphics/a11yto-logo.svg" alt="Logo: An illustration of a silhouette of the Toronto skyline centred in a blue and red border." />
 
