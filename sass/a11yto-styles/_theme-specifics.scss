@@ -105,3 +105,54 @@ a:focus img {
 		text-decoration: underline;		
 	}
 }
+
+.event {
+	background: #ddd;
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	font-size: 0.75rem;
+	font-weight: bold;
+	line-height: 150%;
+	padding: 6px 5%;
+	position: relative;
+
+	.event-title {
+		font-size: 1.5rem;
+		line-height: 100%;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		line-height: 125%;
+	}
+
+	a {
+		color: #1d7fa8;
+	}
+	.counter {
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+}
+@media screen and (min-width: 37.5em) {
+	.counter {
+		margin-bottom: 48px;
+	}	
+}
+
+.more {
+	background: $color__button;
+	border: 0;
+	box-shadow: none;
+	color: #fff;
+	font-size: 0.8rem;
+	font-weight: bold;
+	padding: 10px 48px;
+	text-shadow: none;
+	text-transform: uppercase;
+}

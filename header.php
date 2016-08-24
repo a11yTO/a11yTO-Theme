@@ -46,6 +46,24 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 
+		<section class="event">
+
+			<p class="counter">Next meetup / 3 Days: 30 Hours: 3 Mins</p>
+
+			<h2 class="event-title">Panel: <br />CSUN Recap</h2>
+
+			<ul>
+				<li class="date-time">Nov. 23rd. 5:30PM</li>
+				<li class="location"><a href="#">Shopify Toronto</a><br />
+						<span>80 Spadina Ave. 4th Floor. Toronto. (<a href="#">map</a>)</span></li>
+			</ul>
+
+			<p><a href="#">more information +</a></p>
+
+			<p><button class="more">Join us</button></p>
+
+		</section>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
