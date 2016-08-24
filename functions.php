@@ -113,6 +113,14 @@ function a11yto_scripts() {
 add_action( 'wp_enqueue_scripts', 'a11yto_scripts' );
 
 /**
+ * Custom read more link text.
+ */
+function a11yto_modify_read_more_link() {
+    return '<p><a class="more-link" href="' . get_permalink() . '">more information +</a></p>';
+}
+add_filter( 'the_content_more_link', 'a11yto_modify_read_more_link' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
