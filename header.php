@@ -50,19 +50,30 @@
 
 			<p class="counter">Next meetup / 3 Days: 30 Hours: 3 Mins</p>
 
-			<h2 class="event-title">Panel: <br />CSUN Recap</h2>
+			<?php $query = new WP_Query( array( 'category_name' => 'meetup,camp', 'posts_per_page' => 1 ) ); ?>
+			<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-			<ul>
-				<li class="date-time">Nov. 23rd. 5:30PM</li>
-				<li class="location"><a href="#">Shopify Toronto</a><br />
-						<span>80 Spadina Ave. 4th Floor. Toronto. (<a href="#">map</a>)</span></li>
-			</ul>
-
-			<p><a href="#">more information +</a></p>
-
+			<div class="post">
+				<h2 class="event-title"><?php the_title(); ?></h2>
+				<div class="entry">
+					<?php the_content(); ?>
+				</div><!-- .entry -->
+			</div><!-- .post -->
 			<p><button class="more">Join us</button></p>
 
-		</section>
+			<?php endwhile; 
+			wp_reset_postdata();
+			else : ?>
+
+			<div class="post">
+				<h2 class="event-title">Send Help</h2>
+				<div class="entry">
+					<p>Something is wrong.
+				</div><!-- .entry -->
+			</div><!-- .post -->
+			<?php endif; ?>
+
+		</section><!-- .event -->
 
 	</header><!-- #masthead -->
 

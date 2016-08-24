@@ -155,4 +155,8 @@ a:focus img {
 	padding: 10px 48px;
 	text-shadow: none;
 	text-transform: uppercase;
+	
+	&:hover {
+		box-shadow: none;
+	}
 }
