@@ -9,11 +9,9 @@
 
 *:focus, /* 1 */
 a:focus,
-a:active {
+a:active,
+button:active {
 	outline: 3px solid #3cf !important; /* 2 */
-}
-a:focus img {
-	display: inline-block !important; /* to ensure the outline wraps an entire linked image. */
 }
 
 .site-header {
@@ -83,12 +81,9 @@ a:focus img {
 @media screen and (min-width: 37.5em) {	
 	.main-navigation {
 		background: #fff;
-		font-size: 5rem;
+		font-size: 6rem;
 		line-height: 100%;
-		padding-top: 12px;
-		padding-right: 5%;
-		padding-bottom: 48px;
-		padding-left: 5%;
+		padding: 12px 5% 48px;
 
 		a {
 			display: inline-block;
@@ -113,7 +108,7 @@ a:focus img {
 	font-size: 0.75rem;
 	font-weight: bold;
 	line-height: 150%;
-	padding: 6px 5%;
+	padding: 6px 5% 24px;
 	position: relative;
 
 	.event-title {
@@ -122,6 +117,7 @@ a:focus img {
 	}
 
 	ul {
+		font-weight: normal;
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -146,17 +142,22 @@ a:focus img {
 }
 
 .more {
+	color: #fff !important;
 	background: $color__button;
 	border: 0;
+	border-radius: 3px;
 	box-shadow: none;
 	color: #fff;
 	font-size: 0.8rem;
 	font-weight: bold;
 	padding: 10px 48px;
+	text-decoration: none;
 	text-shadow: none;
 	text-transform: uppercase;
-	
-	&:hover {
-		box-shadow: none;
+}
+@media all and (min-width: 25em) {
+	.more {
+		float: right;
+		margin-top: -2.9rem;
 	}
 }

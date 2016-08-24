@@ -59,14 +59,14 @@
 					<?php the_content(); ?>
 				</div><!-- .entry -->
 			</div><!-- .post -->
-			<p><button class="more">Join us</button></p>
+			<p><a href="<?php echo get_post_meta($post->ID, 'event-link', true); ?>" class="more">Join us</a></p>
 
 			<?php endwhile; 
 			wp_reset_postdata();
 			else : ?>
 
 			<div class="post">
-				<h2 class="event-title">Send Help</h2>
+				<h2 class="event-title">Oops</h2>
 				<div class="entry">
 					<p>Something is wrong.
 				</div><!-- .entry -->
