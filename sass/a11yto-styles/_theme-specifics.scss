@@ -14,8 +14,12 @@ button:active {
 	outline: 3px solid #3cf !important; /* 2 */
 }
 
-.site-header {
+body {
+	height: 100%;
 	position: relative;
+}
+.site-header {
+	background: $color__background-body;
 }
 .site-branding {
 	background: $color__background-body;
@@ -28,7 +32,6 @@ button:active {
 }
 .site-description {
 	float: left;
-	font-weight: bold;
 	font-size: 0.65rem;
 	height: 3.5rem;
 	line-height: 3.5rem;
@@ -62,11 +65,12 @@ button:active {
 		width: auto;
 	}
 	.menu-toggle {
-		background: #fff;
+		background: $color__background-body url(graphics/icon-menu.png) no-repeat 0 50%;
+		background-image: url(graphics/icon-menu.svg);
 		font-size: 0.65rem;
 		margin-top: 0.85rem;
 		padding-bottom: 0.35rem;
-		padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+		padding: 0.5rem 0.5rem 0.5rem 1.65rem;
 		position: absolute;
 		top: 6px;
 		right: 5%;
@@ -75,15 +79,14 @@ button:active {
 }
 
 .main-navigation.toggled {
-		padding-bottom: 24px;
+		padding-bottom: 12px;
 	}
 
 @media screen and (min-width: 37.5em) {	
 	.main-navigation {
-		background: #fff;
 		font-size: 6rem;
 		line-height: 100%;
-		padding: 12px 5% 48px;
+		padding: 12px 5%;
 
 		a {
 			display: inline-block;
@@ -102,13 +105,12 @@ button:active {
 }
 
 .event {
-	background: #ddd;
-	border-top: 1px solid #aaa;
-	border-bottom: 1px solid #aaa;
+	background: #1d7fa8;
+	color: #fff;
 	font-size: 0.75rem;
 	font-weight: bold;
 	line-height: 150%;
-	padding: 6px 5% 24px;
+	padding: 24px 24px 32px;
 	position: relative;
 
 	.event-title {
@@ -117,37 +119,79 @@ button:active {
 	}
 
 	ul {
-		font-weight: normal;
+		font-weight: bold;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 	}
 
 	li {
-		line-height: 125%;
+		line-height: 130%;
+	}
+
+	.address {
+		font-weight: normal;
 	}
 
 	a {
-		color: #1d7fa8;
+		color: #fff;
 	}
 	.counter {
 		font-weight: normal;
 		text-transform: uppercase;
 	}
 }
+
+.event-entry {
+
+	ul {
+		margin-bottom: 48px;
+	}
+
+	li {
+		padding-left: 1rem;
+	}
+
+	.date-time {
+		background: url(graphics/icon-clock.png) no-repeat 0 50%;
+		background-image: url(graphics/icon-clock.svg);
+	}
+	.location {
+		background: url(graphics/icon-location.png) no-repeat 0 50%;
+		background-image: url(graphics/icon-location.svg);
+	}
+
+}
+
 @media screen and (min-width: 37.5em) {
 	.counter {
 		margin-bottom: 48px;
 	}	
 }
+@media screen and (min-width: 58em) {
+	.site-header {
+		background: #1d7fa8;
+	}
+	.site-branding {
+		width: 35%;
+	}
+	.event {
+		height: 100%;
+		margin: 0;
+		padding-top: 7rem;
+		position: absolute;
+		top: 0;
+		right: 12%;
+		width: 22rem;
+	}
+}
 
 .more {
-	color: #fff !important;
+	color:  $color__background-body !important;
 	background: $color__button;
 	border: 0;
 	border-radius: 3px;
 	box-shadow: none;
-	color: #fff;
 	font-size: 0.8rem;
 	font-weight: bold;
 	padding: 10px 48px;
@@ -159,5 +203,10 @@ button:active {
 	.more {
 		float: right;
 		margin-top: -2.9rem;
+	}
+}
+@media screen and (min-width: 58em) {
+	.more {
+		margin-right: -32%;
 	}
 }

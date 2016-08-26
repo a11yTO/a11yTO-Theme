@@ -55,7 +55,7 @@
 
 			<div class="post">
 				<h2 class="event-title"><?php the_title(); ?></h2>
-				<div class="entry">
+				<div class="event-entry">
 					<?php the_content(); ?>
 				</div><!-- .entry -->
 			</div><!-- .post -->
@@ -67,7 +67,7 @@
 
 			<div class="post">
 				<h2 class="event-title">Oops</h2>
-				<div class="entry">
+				<div class="event-entry">
 					<p>Something is wrong.
 				</div><!-- .entry -->
 			</div><!-- .post -->
