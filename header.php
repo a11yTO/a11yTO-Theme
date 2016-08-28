@@ -48,15 +48,22 @@
 
 		<section class="event">
 
-			<p class="counter">Next meetup / 3 Days: 30 Hours: 3 Mins</p>
-
 			<?php $query = new WP_Query( array( 'category_name' => 'meetup,camp', 'posts_per_page' => 1 ) ); ?>
 			<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+
+			<p class="next-event">Our Next <?php if ( in_category('camp') ) { echo 'Camp'; } else { echo 'Meetup'; } ?>: </p>
 
 			<div class="post">
 				<h2 class="event-title"><?php the_title(); ?></h2>
 				<div class="event-entry">
-					<?php the_content(); ?>
+					<ul>
+						<li class="date-time"><?php echo get_post_meta($post->ID, 'event-date-time', true); ?></li>
+						<li class="venue"><a href="<?php echo get_post_meta($post->ID, 'event-venue-link', true); ?>"><?php echo get_post_meta($post->ID, 'event-venue', true); ?></a></li>
+						<li class="location"><?php echo get_post_meta($post->ID, 'event-location', true); ?> (<a href="<?php echo get_post_meta($post->ID, 'event-map-link', true); ?>">map</a>)</li>
+					</ul>
+
+					<p><a href="<?php the_permalink(); ?>">more information +</a></p>
+
 				</div><!-- .entry -->
 			</div><!-- .post -->
 			<p><a href="<?php echo get_post_meta($post->ID, 'event-link', true); ?>" class="more">Join us</a></p>
@@ -71,6 +78,7 @@
 					<p>Something is wrong.
 				</div><!-- .entry -->
 			</div><!-- .post -->
+
 			<?php endif; ?>
 
 		</section><!-- .event -->

@@ -129,14 +129,14 @@ body {
 		line-height: 130%;
 	}
 
-	.address {
+	.location {
 		font-weight: normal;
 	}
 
 	a {
 		color: #fff;
 	}
-	.counter {
+	.next-event {
 		font-weight: normal;
 		text-transform: uppercase;
 	}
@@ -156,7 +156,7 @@ body {
 		background: url(graphics/icon-clock.png) no-repeat 0 50%;
 		background-image: url(graphics/icon-clock.svg);
 	}
-	.location {
+	.venue {
 		background: url(graphics/icon-location.png) no-repeat 0 50%;
 		background-image: url(graphics/icon-location.svg);
 	}
@@ -164,7 +164,7 @@ body {
 }
 
 @media screen and (min-width: 37.5em) {
-	.counter {
+	.next-event {
 		margin-bottom: 48px;
 	}	
 }
@@ -187,7 +187,7 @@ body {
 }
 
 .more {
-	color:  $color__background-body !important;
+	color:  #fff;
 	background: $color__button;
 	border: 0;
 	border-radius: 3px;
