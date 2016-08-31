@@ -48,13 +48,13 @@
 
 		<section class="event">
 
-			<?php $query = new WP_Query( array( 'category_name' => 'meetup,camp', 'posts_per_page' => 1 ) ); ?>
+			<?php $query = new WP_Query( array( 'category_name' => 'meetup', 'posts_per_page' => 1 ) ); ?>
 			<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-			<p class="next-event">Our Next <?php if ( in_category('camp') ) { echo 'Camp'; } else { echo 'Meetup'; } ?>: </p>
+			<p class="next-event">Our Next Meetup: </p>
 
 			<div class="post">
-				<h2 class="event-title"><?php the_title(); ?></h2>
+				<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 				<div class="event-entry">
 					<ul>
 						<li class="date-time"><?php echo get_post_meta($post->ID, 'event-date-time', true); ?></li>

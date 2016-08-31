@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 		uglify: {
 			target: {
 				files: {
-					'js/build/global.min.js': [	'js/src/navigation.js', 'js/src/skip-link-focus-fix.js', 'js/src/customizer.js' ]
+					'js/build/global.min.js': [	'js/src/navigation.js', 'js/src/skip-link-focus-fix.js', 'js/src/svg-injector.js', 'js/src/svg-injector-script.js', 'js/src/customizer.js' ]
 				}
 			}
 		},

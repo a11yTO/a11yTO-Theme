@@ -24,14 +24,5 @@
 
 <?php wp_footer(); ?>
 
-<script src="<?php echo get_template_directory_uri(); ?>/js/build/svg-injector.min.js"></script>
-<script>
-  // Elements to inject
-  var mySVGsToInject = document.querySelectorAll('img.inject-me');
-
-  // Do the injection
-  SVGInjector(mySVGsToInject);
-</script>
-
 </body>
 </html>
