@@ -15,9 +15,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'a11yto' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'a11yto' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: a11yTO-Theme by %2$s.', 'a11yto' ), 'a11yto', '<a href="http://a11yto.com" rel="designer">a11yTO</a>' ); ?>
+
+			<p><?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> &ndash; <?php bloginfo( 'description' ); ?></p> 
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
