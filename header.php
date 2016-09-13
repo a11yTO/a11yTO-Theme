@@ -75,7 +75,7 @@
 			<div class="post">
 				<h2 class="event-title">Oops</h2>
 				<div class="event-entry">
-					<p>Something is wrong.
+					<p>Something is wrong.</p>
 				</div><!-- .entry -->
 			</div><!-- .post -->
 

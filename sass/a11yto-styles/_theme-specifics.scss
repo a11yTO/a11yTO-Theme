@@ -22,7 +22,7 @@ body {
 }
 .site-branding {
 	background: $color__background-body;
-	padding: 6px 5%;
+	padding: 6px 3%;
 }
 .logo {
 	float: left;
@@ -48,8 +48,7 @@ body {
 	float: none;
 	font-weight: bold;
 	font-size: 1.5rem;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding: 0 5%;
 	text-transform: lowercase;
 
 	li {
@@ -88,7 +87,7 @@ body {
 	.main-navigation {
 		font-size: 6rem;
 		line-height: 100%;
-		padding: 12px 5%;
+		padding: 12px 8%;
 
 		a {
 			display: inline-block;
@@ -170,7 +169,7 @@ body {
 		margin-bottom: 48px;
 	}	
 }
-@media screen and (min-width: 58em) {
+@media screen and (min-width: 60em) {
 	body {
 		position: relative;
 	}
@@ -178,7 +177,7 @@ body {
 		background: #1d7fa8;
 	}
 	.site-branding {
-		width: 35%;
+		width: 30%;
 	}
 	.event {
 		height: 100%;
