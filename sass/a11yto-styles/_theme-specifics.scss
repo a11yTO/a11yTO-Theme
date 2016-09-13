@@ -215,8 +215,17 @@ body {
 	}
 }
 
-.site-footer {
+.site-content {
 	background: $color__background-body;
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	position: relative;
+}
+.hentry {
+	margin: 0;
+}
+
+.site-footer {
 	padding: 12px 5%;
 
 	a {
