@@ -37,6 +37,9 @@
 					'after'  => '</div>',
 				) );
 			?>
+			<?php if( get_post_meta($post->ID, 'event-picture', true) ) { ?>
+ 				<p><img src="<?php echo get_post_meta($post->ID, 'event-picture', true); ?>" alt="<?php echo get_post_meta($post->ID, 'event-picture-alt-text', true); ?>"/>
+			<?php } ?>
 		</div><!-- .entry-content -->
 	</section><!--entry -->
 </article><!-- #post-## -->
