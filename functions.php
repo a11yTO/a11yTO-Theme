@@ -121,6 +121,24 @@ function a11yto_modify_read_more_link() {
 add_filter( 'the_content_more_link', 'a11yto_modify_read_more_link' );
 
 /**
+ * Add an 'even' or 'odd' class to `post_class();` of posts.
+ */
+add_filter ( 'post_class' , 'a11yto_odd_or_even' );
+if( !function_exists( 'a11yto_odd_or_even' ) ) {
+  global $current_class;
+  $current_class = 'odd';
+  
+  function a11yto_odd_or_even ( $classes ) {
+    global $current_class;
+    $classes[] = $current_class;
+    
+    $current_class = ($current_class == 'odd') ? 'even' : 'odd';
+    
+    return $classes;
+  }
+}
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
