@@ -9,8 +9,8 @@
 
 ?>
 
-<section class="post-entry">
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<section class="entry">
 		<header class="entry-header">
 			<?php
 			if ( is_single() ) :
@@ -38,5 +38,5 @@
 				) );
 			?>
 		</div><!-- .entry-content -->
-	</article><!-- #post-## -->
-</section><!-- .post-entry -->
+	</section><!--entry -->
+</article><!-- #post-## -->

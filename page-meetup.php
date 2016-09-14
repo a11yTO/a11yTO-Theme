@@ -22,35 +22,38 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 	<div id="secondary" class="secondary-content-area">
+		<div class="past-meetups">
+			<h2>Past meetups</h2>
+			<?php
+			$args = array(
+				'nopaging'       => false,
+				'category_name'  => 'meetup',
+				'offset'         => 1
+			);
+			$custom_query = new WP_Query($args);
+			if ($custom_query->have_posts()) :
+				while($custom_query->have_posts()) :
+					$custom_query->the_post();
 
-		<?php
-		$args = array(
-			'nopaging'       => false,
-			'category_name'  => 'meetup',
-		);
-		$custom_query = new WP_Query($args);
-		if ($custom_query->have_posts()) :
-			while($custom_query->have_posts()) :
-				$custom_query->the_post();
+					/*
+					 * Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', 'category-meetup' );
+				endwhile; 
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'category-meetup' );
-			endwhile; 
+					the_posts_navigation();
 
-				the_posts_navigation();
+				else :
 
-			else :
+					get_template_part( 'template-parts/content', 'none' );
 
-				get_template_part( 'template-parts/content', 'none' );
+			endif; 
+			wp_reset_postdata(); ?>
+		</div><!-- .past-meetups -->
 
-		endif; 
-		wp_reset_postdata(); ?>
-
-	</div><!-- #primary -->
+	</div><!-- #secondary -->
 
 <?php
 get_footer();
