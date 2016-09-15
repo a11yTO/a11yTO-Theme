@@ -121,7 +121,8 @@ function a11yto_modify_read_more_link() {
 add_filter( 'the_content_more_link', 'a11yto_modify_read_more_link' );
 
 /**
- * Add an 'even' or 'odd' class to `post_class();` of posts.
+ * Add an 'even' or 'odd' class to `post_class();` of posts as found on
+ * http://wpnom.com/chapter/add-even-and-odd-class-to-the-wordpress-post-class/
  */
 add_filter ( 'post_class' , 'a11yto_odd_or_even' );
 if( !function_exists( 'a11yto_odd_or_even' ) ) {

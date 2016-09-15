@@ -1,9 +1,11 @@
 /*
- * This stlesheet serves as one place where all a11yTO-Theme specific styles will reside, making it easier to manage now and in the future. Or that's the hope.
+ * This stylesheet serves as one place where all a11yTO-Theme specific styles will reside making it easier to edit and manage now and in the future. Or that's the hope.
+ * And is conveniently grouped together through Sass' nesting feature.
  */
 
 /*
- * 1. I used the universal selector (*) and a generic "a" selector prior to the focus pseudo-element to insure the styles I declared below are applied to anything that receives focus, and in a consistant manner.
+ * Obtained, yet slightly modified, from https://github.com/abledaccess/FOCUS
+ * 1. Used the universal selector (*) and a generic "a" selector prior to the focus pseudo-element to insure the styles I declared below are applied to anything that receives focus in a consistant manner.
  * 2. Use of !important's ensure conflicts are overridden by FOCUS' styles.
  */
 
@@ -14,9 +16,18 @@ button:active {
 	outline: 3px solid #3cf !important; /* 2 */
 }
 
+/*--------------------------------------------------------------
+## Body styles
+--------------------------------------------------------------*/
+
 body {
 	height: 100%;
 }
+
+/*--------------------------------------------------------------
+## Header styles
+--------------------------------------------------------------*/
+
 .site-header {
 	background: $color__background-body;
 }
@@ -43,6 +54,11 @@ body {
 		text-decoration: none;
 	}
 }
+
+/*--------------------------------------------------------------
+## Main navigation styles and media queries
+--------------------------------------------------------------*/
+
 .main-navigation {
 	background: $color__background-body;
 	float: none;
@@ -104,6 +120,10 @@ body {
 		text-decoration: underline;		
 	}
 }
+
+/*--------------------------------------------------------------
+## Event styles and media queries
+--------------------------------------------------------------*/
 
 .event {
 	background: #1d7fa8;
@@ -215,6 +235,10 @@ body {
 	}
 }
 
+/*--------------------------------------------------------------
+## Site content styles
+--------------------------------------------------------------*/
+
 .site-content {
 	background: $color__background-body;
 	border-top: 1px solid #aaa;
@@ -224,6 +248,10 @@ body {
 .hentry {
 	margin: 0;
 }
+
+/*--------------------------------------------------------------
+## Footer styles
+--------------------------------------------------------------*/
 
 .site-footer {
 	padding: 12px 5%;
