@@ -58,7 +58,7 @@
 				<div class="event-entry">
 					<ul>
 						<li class="date-time"><?php echo get_post_meta($post->ID, 'event-date-time', true); ?></li>
-						<li class="venue"><a href="<?php echo get_post_meta($post->ID, 'event-venue-link', true); ?>"><?php echo get_post_meta($post->ID, 'event-venue', true); ?></a></li>
+						<li class="venue"><?php echo get_post_meta($post->ID, 'event-venue', true); ?></li>
 						<li class="location"><?php echo get_post_meta($post->ID, 'event-location', true); ?> (<a href="<?php echo get_post_meta($post->ID, 'event-map-link', true); ?>">map</a>)</li>
 					</ul>
 
