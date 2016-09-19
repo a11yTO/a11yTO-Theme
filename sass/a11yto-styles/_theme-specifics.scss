@@ -137,6 +137,10 @@ body {
 	.event-title {
 		font-size: 1.5rem;
 		line-height: 100%;
+		margin: 0 0 6px 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	ul {
@@ -206,7 +210,7 @@ body {
 		position: absolute;
 		top: 0;
 		right: 12%;
-		width: 22rem;
+		width: 35%;
 	}
 }
 
@@ -229,9 +233,9 @@ body {
 		margin-top: -2.9rem;
 	}
 }
-@media screen and (min-width: 58em) {
+@media screen and (min-width: 60em) {
 	.more {
-		margin-right: -32%;
+		margin-right: -95px;
 	}
 }
 

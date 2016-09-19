@@ -61,7 +61,7 @@
 			<p class="next-event">Our Next Meetup: </p>
 
 			<div class="post">
-				<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+				<?php the_title( '<h2 class="event-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 				<div class="event-entry">
 					<ul>
 						<li class="date-time"><?php echo get_post_meta($post->ID, 'event-date-time', true); ?></li>
