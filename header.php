@@ -48,8 +48,15 @@
 
 		<section class="event">
 
-			<?php $query = new WP_Query( array( 'category_name' => 'meetup', 'posts_per_page' => 1 ) ); ?>
-			<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+			<?php
+			$args = array(
+				'posts_per_page' => 1,
+				'category_name'  => 'meetup'
+			);
+			$custom_query = new WP_Query($args); ?>
+			<?php if ($custom_query->have_posts()) :
+				while($custom_query->have_posts()) :
+					$custom_query->the_post(); ?>
 
 			<p class="next-event">Our Next Meetup: </p>
 
