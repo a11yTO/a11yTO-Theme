@@ -26,7 +26,7 @@ get_header(); ?>
 			<h2>Past meetups</h2>
 			<?php
 			$args = array(
-				'nopaging'       => false,
+				'posts_per_page' => -1,
 				'category_name'  => 'meetup',
 				'offset'         => 1
 			);
