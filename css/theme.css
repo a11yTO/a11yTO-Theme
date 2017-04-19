@@ -297,7 +297,8 @@ text-decoration:none;
 }
 
 .entry-content a:hover, .entry-content a:active, .entry-content a:focus, .sidebar-widget a:hover, .sidebar-widget a:active, .sidebar-widget a:focus, .blue-bgrnd a:hover, .blue-bgrnd a:active, .blue-bgrnd a:focus, .content-area a:hover, .content-area a:active, .content-area a:focus, .red-bgrnd a:hover, .red-bgrnd a:active, .red-bgrnd:focus {
-color: rgba(249, 249, 249, 0.5);
+color: #272727 /*rgba(249, 249, 249, 0.5)*/;
+border-bottom: 2px solid #272727;
 }
 
 .container {
@@ -721,6 +722,7 @@ transform: translate3d(0, 0, 0);
 -webkit-transition: all .5s ease-out;
 }
 
+
 .a11y-button-large {    
 opacity: 1;
 margin-left: 20px;    
@@ -802,42 +804,42 @@ border: 1px solid #ED3A12;
 
 .a11y-button.small.black {
 color: #f9f9f9;
-background-color: #000;
-border: 1px solid #000000;
+background-color: #272727;
+border: 1px solid #272727;
 }
 
-.a11y-button.small:hover, .btn-secondary:hover {
+.a11y-button.small:hover, .a11y-button.small:focus .btn-secondary:hover, .btn-secondary:focus {
 color: #f9f9f9;
-background-color: #000;    
+background-color: #272727;    
 }
 
-.a11y-button.small.blue:hover {
+.a11y-button.small.blue:hover, .a11y-button.small.blue:focus {
 color: #f9f9f9;
-background-color: #000;
-border: 1px solid #000;
+background-color: #272727;
+border: 1px solid #272727;
 }
 
-.a11y-button.small.red:hover, .a11y-button-large:hover {
+.a11y-button.small.red:hover, .a11y-button.small.red:focus, .a11y-button-large:hover, .a11y-button-large:focus {
 color: #f9f9f9;
-background-color: #000;
-border: 1px solid #000;
+background-color: #272727;
+border: 1px solid #272727;
 }
 
-.a11y-button.small.white:hover {
+.a11y-button.small.white:hover, .a11y-button.small.white:focus {
 color: #f9f9f9;
-background-color: #000;
-border: 1px solid #000;
+background-color: #272727;
+border: 1px solid #272727;
 }
 
-.a11y-button.small.black:hover {
-color: #000000;
+.a11y-button.small.black:hover, .a11y-button.small.black:focus {
+color: #272727;
 background-color: #f9f9f9;
 border: 1px solid #000000;
 }
 
-.schedule-single.conf .a11y-button:hover {
+.schedule-single.conf .a11y-button:hover, .schedule-single.conf .a11y-button:focus {
  color: #f9f9f9;
-background-color: #000;    
+background-color: #272727;    
 }
 
 .red-border {
