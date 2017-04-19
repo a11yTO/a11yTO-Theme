@@ -2,94 +2,79 @@
 /**
  * The header for our theme.
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * Displays all of the <head> section and everything up till <div id="content">
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package a11yTO-Theme
+ * @package a11yto
  */
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
 <?php wp_head(); ?>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
-
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'a11yto' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding clear">
+<div id="page" class="hfeed site">
+    
+    <!-- ******************* The Navbar Area ******************* -->
+    <div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
+	
+        <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'a11yto' ); ?></a>
 
-				<img class="inject-me logo" src="<?php echo get_template_directory_uri(); ?>/graphics/a11yto-logo.svg" alt="Logo: An illustration of a silhouette of the Toronto skyline centred in a blue and red border." />
+        <nav class="navbar navbar-dark bg-inverse site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                            
 
-				<?php $description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-					<p class="site-description"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $description; /* WPCS: xss ok. */ ?></a></p>
-				<?php
-				endif; ?>
+               
 
-			</a>
 
-		</div><!-- .site-branding -->
+                            <div class="navbar-header">
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'a11yto' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+                                <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 
-		<section class="event">
+                                <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target=".exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    					&#9776;
+  				</button>
 
-			<?php
-			$args = array(
-				'posts_per_page' => 1,
-				'category_name'  => 'meetup'
-			);
-			$custom_query = new WP_Query($args); ?>
-			<?php if ($custom_query->have_posts()) :
-				while($custom_query->have_posts()) :
-					$custom_query->the_post(); ?>
+                                <!-- Your site title as branding in the menu -->
+<!--
+	                                <?php if (!has_custom_logo()) { ?>
+		                                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+		                                	<?php bloginfo( 'name' ); ?>
+		                                </a>
+	                                <?php } else { the_custom_logo(); } ?>
+-->
+                                <!-- end custom logo -->
 
-			<p class="next-event">Our Next Meetup: </p>
+                            </div>
 
-			<div class="post">
-				<?php the_title( '<h2 class="event-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
-				<div class="event-entry">
-					<ul>
-						<li class="date-time"><?php echo get_post_meta($post->ID, 'event-date-time', true); ?></li>
-						<li class="venue"><?php echo get_post_meta($post->ID, 'event-venue', true); ?></li>
-						<li class="location"><?php echo get_post_meta($post->ID, 'event-location', true); ?> (<a href="<?php echo get_post_meta($post->ID, 'event-map-link', true); ?>">map</a>)</li>
-					</ul>
+                            <!-- The WordPress Menu goes here -->
+                            <?php wp_nav_menu(
+                                    array(
+                                        'theme_location' => 'primary',
+                                        'container_class' => 'collapse navbar-toggleable-lg exCollapsingNavbar',
+                                        'menu_class' => 'nav navbar-nav',
+                                        'fallback_cb' => '',
+                                        'menu_id' => 'main-menu',
+                                        'walker' => new wp_bootstrap_navwalker()
+                                    )
+                            ); ?>
 
-					<p><a href="<?php the_permalink(); ?>">more information +</a></p>
+                
+            
+        </nav><!-- .site-navigation -->
+        
+    </div><!-- .wrapper-navbar end -->
 
-				</div><!-- .entry -->
-			</div><!-- .post -->
-			<p><a href="<?php echo get_post_meta($post->ID, 'event-link', true); ?>" class="more">Join us</a></p>
 
-			<?php endwhile; 
-			wp_reset_postdata();
-			else : ?>
 
-			<div class="post">
-				<h2 class="event-title">Oops</h2>
-				<div class="event-entry">
-					<p>Something is wrong.</p>
-				</div><!-- .entry -->
-			</div><!-- .post -->
 
-			<?php endif; ?>
 
-		</section><!-- .event -->
 
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">

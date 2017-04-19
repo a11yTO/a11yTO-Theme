@@ -2,9 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package a11yTO-Theme
+ * @package a11yto
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -12,6 +10,8 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area" role="complementary">
+<div id="secondary" class="col-md-4 widget-area" role="complementary">
+
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+	
+</div><!-- #secondary -->
