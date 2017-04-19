@@ -8,7 +8,7 @@
             <h4 class="h4"><?php echo get_theme_mod( 'meetup_meetup1_section_title_setting', 'VR and lived experience' ); ?></h4><br>
                 <p><?php echo get_theme_mod( 'meetup_meetup1_section_text_setting', 'Terrence Ho & team at The Lived Experience are on a mission - to disrupt the accessibility training industry.' ); ?></p>
 
-             <a class="meetup-link" href="<?php echo get_theme_mod( 'meetup_meetup1_section_button_link_setting', '#' ); ?>" ><?php echo get_theme_mod( 'meetup_meetup1_section_button_setting', 'more information +' ); ?></a>
+             <a class="meetup-link" href="<?php echo get_theme_mod( 'meetup_meetup1_section_button_link_setting', '#' ); ?>" ><?php echo get_theme_mod( 'meetup_meetup1_section_button_setting', 'more information' ); ?> <span aria-hidden="true">+</span></a>
 
           </div>
          

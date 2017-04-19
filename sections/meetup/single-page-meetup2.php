@@ -7,7 +7,7 @@
             <h4 class="h4"><?php echo get_theme_mod( 'meetup_meetup2_section_title_setting', 'A11y success stories' ); ?></h4><br>
                 <p><?php echo get_theme_mod( 'meetup_meetup2_section_text_setting', 'Please join a global community in celebrating the 5th Global Accessibility Awareness Day (GAAD) ...' ); ?></p>
 
-             <a class="meetup-link" href="<?php echo get_theme_mod( 'meetup_meetup2_section_moreinfo_link_setting', '#' ); ?>" ><?php echo get_theme_mod( 'meetup_meetup2_section_moreinfo_setting', 'more information +' ); ?></a>
+             <a class="meetup-link" href="<?php echo get_theme_mod( 'meetup_meetup2_section_moreinfo_link_setting', '#' ); ?>" ><?php echo get_theme_mod( 'meetup_meetup2_section_moreinfo_setting', 'more information' ); ?> <span aria-hidden="true">+</span></a>
 
           </div>
         

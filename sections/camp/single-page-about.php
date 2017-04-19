@@ -18,7 +18,7 @@
                     <strong><span class="fa fa-ticket"></span> $10</strong> donation</p>
                  </div>
                 
-                <a href="#">more information +</a>
+                <a href="#">more information <span aria-hidden="true">+</span></a>
                 
                 <a class="a11y-button small" href="<?php echo get_theme_mod( 'frontpage_about_section_button_url_setting', '#' ); ?>"> <?php echo get_theme_mod( 'frontpage_about_section_button_setting', 'REGISTER NOW' ); ?></a> 
                 <div class="clearfix"></div>
