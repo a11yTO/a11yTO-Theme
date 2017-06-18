@@ -786,9 +786,9 @@ opacity: 0.5;
     right: -10px; } }
 
 .a11y-button.small.blue {
-color: #f9f9f9;
-background-color: #272727;
-border: 1px solid #272727;
+color: #ffffff;
+background-color: #0A468D;
+border: 1px solid #0A468D;
 }
 
 .a11y-button.small.red {
@@ -900,9 +900,9 @@ color: #fff;
 }
 
 footer .featured a {
-color: #1d7fa8;
+color: #0A468D;
 text-transform: uppercase;
-border-bottom: 1px solid #1d7fa8;
+border-bottom: 1px solid #0A468D;
  transition: all .5s ease-out;
 -o-transition: all .5s ease-out;
 -ms-transition: all .5s ease-out;
@@ -1010,7 +1010,7 @@ color: #000;
 }
 
 .speak .h1 {
-color: #1d7fa8;    
+color: #0A468D;    
 }
 
 #share {
@@ -1022,7 +1022,7 @@ color: #ED3A12;
 }
 
 #share.speak .white {  
-border: 1px solid #ED3A12;
+border: 1px solid #0A468D;
 }
 
 #sponsors {
